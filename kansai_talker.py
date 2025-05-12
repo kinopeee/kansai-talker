@@ -33,6 +33,11 @@ api_key_source = "環境変数"
 if not API_KEY and hasattr(st, 'secrets') and 'ANTHROPIC_API_KEY' in st.secrets:
     API_KEY = st.secrets['ANTHROPIC_API_KEY']
     api_key_source = "Streamlit secrets"
+    
+if not API_KEY:
+    API_KEY = st.text_input("APIキーを入力してください", type="password")
+    if API_KEY:
+        api_key_source = "ユーザー入力"
 
 if DEBUG:
     st.sidebar.write("デバッグ情報:")
