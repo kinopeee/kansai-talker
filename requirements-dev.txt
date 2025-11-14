@@ -1,0 +1,17 @@
+# 開発用依存関係
+
+# テスティング
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# コード品質
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0
+
+# 型チェック用
+types-requests>=2.31.0
+
+# 環境変数管理
+python-dotenv>=1.0.0
